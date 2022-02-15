@@ -21,9 +21,9 @@ const Navigation = () => {
                 {/** NavBar */}
               
                <Box className="Logo">
-                         <img src={'/icons/Logo.svg'} alt=" " 
+                         <img src={'/icons/Logo.svg'} alt=" " />
                      
-/>
+
                 </Box>
                
                    <Box ClassName="MenuList" >

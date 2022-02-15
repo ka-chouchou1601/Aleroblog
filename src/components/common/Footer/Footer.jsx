@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Box, Stack, VStack, HStack} from '@chakra-ui/react'
+import {Box, Stack, VStack, HStack,Button, Icon} from '@chakra-ui/react'
+import {FaFacebook,FaTwitter,FaLinkedin,FaInstagram} from 'react-icons/fa'
+
 const Footer = () => {
     let Fsecond=[{
         id:1,
@@ -60,7 +62,16 @@ let Ffourth=[{
                                        <h2> Bring your business online.We can do it with you!</h2>
                                  <h5>Mobile : +2540794 268882</h5>
                                  <h5>Email  : marketing@alero.co.ke</h5>
-                                   </Box>
+                                 </Box>
+                                 <HStack w='100%' className="SocialContainer" >
+               <Button color='#264D2D' variant ="ghost"  leftIcon={<FaTwitter />}   p='0px' />         
+               <Button color='#264D2D'  variant ="ghost"  leftIcon={<FaFacebook />}  p='0px'/>
+              <Button color='#264D2D'  variant ="ghost" leftIcon={<FaLinkedin />} p='0px'/>
+              <Button color='#264D2D' variant ="ghost" leftIcon={<FaInstagram />} p='0px'/>     
+            
+</HStack>
+                                  
+                                  
                                </VStack>
                            </Box>
                            {/**services section */}
@@ -108,6 +119,7 @@ let Ffourth=[{
                         
                      </VStack>
                      </Box>
+                     
                        </Stack>
                        </Box>  
                        </Container>
