@@ -30,41 +30,24 @@ const Product2 = () => {
                                 </Box>
                        </Box>
 {/**main section */}
-                       <Stack direction="row" spacing="30px">
+                       <Stack direction="row" spacing="30px" >
 {/**side section  */}
-<Box width="100%">
-<Stack direction="column" bg="white">
-    <Box className="T-Title" >
+<Box  >
+<Stack direction="column" bg="white"  pl="20px" pr="20px" pt="20px" pb="20px" borderRadius="5px" >
+    <Box className="T-Title"  >
                                 <h2>Slug*</h2>
                                 <Input placeholder=''
-                                    position="static"
-                                    width=" 595.9px"
-                                    height=" 43.3px"
-                                    left="0px"
-                                    top=" 31px"
-                                    flex="none"
-                                    order=" 1"
-                                    alignSelf=" stretch"
-                                    flexGrow="0"
-                                    margin=" 15px 0px"
+                                    
+                                   
                                 />
                             </Box>
-                            <Box className="T-Title">
+                            <Box className="T-Title" >
                                 <h2>Product Title*</h2>
                                 <Input placeholder=''
-                                    position="static"
-                                    width=" 595.9px"
-                                    height=" 43.3px"
-                                    left="0px"
-                                    top=" 31px"
-                                    flex="none"
-                                    order=" 1"
-                                    align-self=" stretch"
-                                    flex-grow="0"
-                                    margin=" 15px 0px"
+                                    
                                 />
                             </Box>
-                            <Box className="T-Title">
+                            <Box className="T-Title" >
                                 <h2>Product Description*</h2>
                                
                                      <textarea placeholder='' type="text"
@@ -225,26 +208,34 @@ overflow:hidden;
     }
 
 .T-Title{
+width:100%;
+    
     h2{
+
+        display:flex;
         font-family: Inter;
         font-style: normal;
         font-weight: 500;
         font-size: 17.3216px;
         line-height: 95.02%;
         color: #3A3A3A;
+        margin-bottom: 5px;
+   
+
+      
+
+
         
     }
     textarea{
  position:static;
-                                    width:596.14px;
+                                    width:496.14px;
                                     height:156px;
-                                    left:0px;
+                               
                                     top:0px;
                                     flex:none;
                                     order:1;
                                     align-self:stretch;
-                                    flex-gro:0;
-                                    margin:15px 0px;
                                     border: 1px solid #000000;
                                     border-radius:8px;
                                     outline:none;

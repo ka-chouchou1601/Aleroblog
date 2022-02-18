@@ -1,7 +1,7 @@
 import  React from'react'
 import  styled from'styled-components'
 import {Box, Stack, VStack, HStack} from '@chakra-ui/react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button, ButtonGroup, IconButton,SearchIcon } from '@chakra-ui/react'
 import SideNav from '../components/SideNav/SideNav'
 import ToolBar from '../components/ToolBar/ToolBar'
 
@@ -59,40 +59,61 @@ const PostGrid=()=>{
     },]
     return(
 <Container>
-    <Stack direction="row">
-<SideNav/>
-<Stack direction="column" direction="column" width="100%" bg="#e5e5e5" spacing="64px">
-    <ToolBar/>
-<Box bg="#e5e5e5" >
-<Stack className="row">
+    <Stack direction="row" width="100%" overflow="hidden" >
+     
+ <Box>
+      <SideNav/>  
+      </Box>
+
+<Stack  direction="column" width="100%"    bg="#e5e5e5" spacing="60px" >
+    {/**
+     * 
+     *    
+     */}
+  <ToolBar/>   
+
+<Box bg="#e5e5e5"  w='100%' pl='5%' pr='5%'  >
+<Stack direction="column"   w='100%' overflowX="hidden" spacing={'30px'} >
        {/**header */}
-     <Box className="Header" width="100%">
+     <Box className="Header" >
                             
                                 <Box className="Title" >
-                                    <h1>Create Blog</h1>
-                                    <h5>Modify the sections </h5>
+                                    <h1>Recent Post</h1>
+                                    <h5>View Blog postList  </h5>
                                 </Box>
                                 <Box >
                                     {/**button */}
                                         <Button bg='#BF2D35'  size='lg' >
-                                            submit
+                                            + Create New
                                         </Button>
                                 </Box>
                        </Box>
+                       {/**search Bar */}
+                       <Stack direction="row" >
+                         <Box className="SearchBar">
+                        
+   
+                         </Box>
 
-<Box   bg="#e5e5e5"  >
+                       </Stack>
+
+<Box   bg="white"  w='100%' pt='0px' borderRadius={'8px'}>
 
     {/**head title */}
-    <Stack direction="row"   pl="50px" pr="50px" spacing="15px" >
+    <Stack direction="row" w='100%'    spacing="15px" >
         <Box className="Table" >
-          <form>
+
               <table>
                   <thead>
                       <tr>
+
                           <th>#</th>
                            <th>Title</th>
                             <th>Categories</th>
                              <th>Created Date</th>
+                             <th></th>
+                             <th></th>
+                            
                       </tr>
                   </thead>
                   <tbody>
@@ -105,7 +126,8 @@ const PostGrid=()=>{
                           <td>{data.Title}</td>
                           <td>{data.Categories}</td>
                             <td>{data. CreatedDate}</td>
-                              <Button colorScheme='red' variant='outline' 
+
+                             <td> <Button colorScheme='red' variant='outline' 
                             position="static"
 width= "106px"
 height=" 29px"
@@ -117,8 +139,8 @@ flex-grow=" 0"
 margin=" 0px 0px">
                            
     Delete
-  </Button>
-  <Button bg='#295DA2' variant='solid'
+  </Button></td>
+ <td> <Button bg='#295DA2' variant='solid'
   position=" static"
 width=" 105px"
 height="29px"
@@ -130,8 +152,8 @@ flex-grow="0"
 margin="0px 0px"
  >
     Edit
-  </Button>
-  
+  </Button></td>
+ 
   
     </tr>
                           ))
@@ -143,17 +165,12 @@ margin="0px 0px"
                         
                   </tbody>
               </table>
-          </form>
+         
        </Box>
     </Stack>
      </Box>
 </Stack>
 </Box>
-
-{/**table content */}
-       
-
-
  </Stack>   
 </Stack>
 </Container>
@@ -163,11 +180,14 @@ margin="0px 0px"
     {/**table */}
 
      const Container= styled.div`
-     overflow:hidden;
+     width:100%;
+     overflow-x:hidden;
      .Header{
     width:100%;
     display:flex;
-    justify-content: space-between;
+    align-items:center;
+    justify-content:space-between;
+   
 }
 .Title{
     
@@ -193,14 +213,11 @@ h5 {
     }
      .Table{
         
-         display: flex;
-         justify-content: space-between;
-         flex-direction: row;
-         position: absolute;
-        width: 100%;
-         height: 15px;
-         
-
+       
+  width:100%;
+table {
+  width:100%;
+}
 th,
 td {
   border: 1px solid #ffffff;
